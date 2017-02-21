@@ -32,6 +32,10 @@ Git与GitHub联动
 		$ git push -u origin master   //把本地库的所有内容推送到远程库上,如果远程库是空的第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来
 
 		$ git push origin master   //第一次提交之后，就可以去掉-u参数了
+
+		错误提示：error: failed to push some refs to 
+		解决办法：
+		$ git pull --rebase origin master   //把GitHub上的最新文件下载下来，接着再使用 $ git push origin master
 * 从远程库克隆
 		
 		$ git clone git@github.com:michaelliao/gitskills.git
