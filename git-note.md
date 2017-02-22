@@ -120,3 +120,33 @@ Git 教程
 		$ rm test.txt   //用rm命令删除文件管理器中的文件
 		$ git commit -m "delete test.text"  //再用git commit命令确认此次操作
 		$ git checkout -- test.txt   //删错了，因为版本库里还有，所以可以很轻松地把误删的文件恢复到最新版本。git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”
+* 创建分支
+		
+		$ git checkout -b dev   //创建dev分支，然后切换到dev分支，checkout加个-b相当于下面两条命令
+		Switched to a new branch 'dev'
+
+		$ git branch dev   //创建dev分支
+		$ git checkout dev   //切换到dev分支
+		Switched to branch 'dev'
+		
+		$ git branch   //查看当前分支
+
+		$ git merge dev   //把dev分支的工作成果合并到master分支
+
+		$ git branch -d dev   //删除dev分支
+	查看分支：git branch
+	创建分支：git branch <name>
+	切换分支：git checkout <name>
+	创建+切换分支：git checkout -b <name>
+	合并某分支到当前分支：git merge <name>
+	删除分支：git branch -d <name>
+* 创建标签
+    命令git tag <name>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+    git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+    git tag -s <tagname> -m "blablabla..."可以用PGP签名标签；
+    命令git tag可以查看所有标签
+	
+	命令git push origin <tagname>可以推送一个本地标签；
+	命令git push origin --tags可以推送全部未推送过的本地标签；
+	命令git tag -d <tagname>可以删除一个本地标签；
+	命令git push origin :refs/tags/<tagname>可以删除一个远程标签
