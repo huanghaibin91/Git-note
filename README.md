@@ -1,2 +1,2 @@
 # git-note
-about learn git
+git 笔记
