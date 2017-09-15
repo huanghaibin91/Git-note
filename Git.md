@@ -1,7 +1,9 @@
-GitHub 教程
-===
-GitHub信息
----
+# GitHub 教程 #
+
+----------
+
+## GitHub信息 ##
+
 * GitHub是为开发者提供Git仓库的代码托管服务。
 * GitHub上公开的代码都是由Git管理。
 * Pull request功能是指开发者在本地对源代码进行更改后，向GitHub中托管的Git仓库请求合并的功能。
@@ -11,7 +13,8 @@ GitHub信息
 * Wiki功能，任何人都能随时对一篇文章进行修改并保存。
 
 Git与GitHub联动
----
+
+----------
 * 创建SSH Key
 	* 第一步
 		
@@ -49,8 +52,9 @@ Git与GitHub联动
 		README.md
 	GitHub给出的地址不止一个，还可以用https://github.com/michaelliao/gitskills.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议
 
-Git 教程
-===
+## Git 教程 ##
+
+----------
 * 创建版本库
 
 		$ mkdir learn-git   //在合适的位置，用mkdir命令创建一个空文件目录，文件夹名称不要用中文
